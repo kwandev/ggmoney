@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+.place-list {
+  position: sticky;
+  margin-top: 0.5rem;
+  background-color: #fff;
+  border: 1px solid $gray;
+  border-radius: 0.2rem;
+
+  .places {
+    padding: 0.5rem;
+  }
+
+  .btn-spread-fold {
+    padding: 0.4rem 0;
+    border-top: 1px solid $gray;
+    text-align: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($primary, 0.1);
+    }
+  }
+}

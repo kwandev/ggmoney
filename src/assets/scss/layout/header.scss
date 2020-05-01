@@ -1,0 +1,35 @@
+@charset 'utf-8';
+
+.header {
+  background-color: $primary;
+  color: $white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 4rem;
+
+    .logo {
+      font-family: $logo-font, sans-serif;
+      font-size: 2rem;
+    }
+
+    .btn-menu {
+      padding-right: 0;
+      color: $white;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: $contents-width-m) {
+  .header {
+    .container {
+      .btn-menu {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

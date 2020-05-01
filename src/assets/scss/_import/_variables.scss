@@ -2,14 +2,20 @@
 
 /* font */
 $font-size: 16px;
+$mobile-font-size: 14px;
+
+$font: 'Noto Sans KR';
+$logo-font: 'Poiret One';
 
 /* layout */
-$contents-width: 1140px;
-$contents-width-m: 480px;
+$contents-width: 992px;
+$contents-width-m: 576px;
 
 /* color */
-$primary: #00c854;
-$secondary: #e1e4e7;
+$primary: #6886c5;
+$danger: #ffacb7;
+$warning: #ffe0ac;
 
-$white: #fff;
+$white: #f9f9f9;
 $dark: #333;
+$gray: #e2e2e2;
