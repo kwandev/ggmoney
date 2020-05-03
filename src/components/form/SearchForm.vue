@@ -1,6 +1,6 @@
 <template>
   <div class="search-form">
-    <b-form inline @submit="onSubmit">
+    <b-form inline @submit.prevent="onSubmit">
       <label class="sr-only" for="sigun">시군</label>
       <b-form-select id="sigun" class="form-select" v-model="sigun" :options="sigunOptions" @change="onChange">
         <template v-slot:first>
@@ -42,9 +42,14 @@ export default {
     }
   },
   methods: {
-    onSubmit(e) {
-      e.preventDefault()
-      console.log(sigungu)
+    onSubmit() {
+      const options = {
+        SIGUN_NM: this.sigun,
+        CMPNM_NM: this.name,
+        REFINE_ROADNM_ADDR: this.gu,
+        REFINE_LOTNO_ADDR: this.gu
+      }
+      this.$store.dispatch('place/search', options)
     },
     onChange() {
       const selected = this.sigunOptions.find((sigun) => {

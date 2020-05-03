@@ -8,6 +8,10 @@
   border: 1px solid $gray;
   border-radius: 0.2rem;
 
+  &.fold {
+    height: 140px;
+  }
+
   .places {
     padding: 0.5rem;
     height: calc(100% - 33px);
@@ -33,6 +37,10 @@
   padding: 0.5rem;
   border-top: 1px dashed $gray;
   cursor: pointer;
+
+  &.selected {
+    background-color: rgba($warning, 0.2);
+  }
 
   &:first-child {
     border-top: 0;
