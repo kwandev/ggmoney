@@ -5,9 +5,10 @@
 
       <place-list />
     </div>
-    <portal to="portal">
+
+    <!-- <portal to="portal">
       <p>@@@@@@@@@@@@@@@This slot content will be rendered wherever the is located.</p>
-    </portal>
+    </portal> -->
   </div>
 </template>
 

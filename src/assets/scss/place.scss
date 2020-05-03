@@ -3,12 +3,15 @@
 .place-list {
   position: sticky;
   margin-top: 0.5rem;
+  height: calc(100vh - 64px - (1rem + 56px) - 1.5rem);
   background-color: #fff;
   border: 1px solid $gray;
   border-radius: 0.2rem;
 
   .places {
     padding: 0.5rem;
+    height: calc(100% - 33px);
+    overflow-y: auto;
   }
 
   .btn-spread-fold {
@@ -20,6 +23,77 @@
 
     &:hover {
       background-color: rgba($primary, 0.1);
+    }
+  }
+}
+
+.place-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-top: 1px dashed $gray;
+  cursor: pointer;
+
+  &:first-child {
+    border-top: 0;
+  }
+  &:hover {
+    background-color: rgba($primary, 0.1);
+  }
+
+  .place-info {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+
+    .place--name {
+      margin-right: 0.5rem;
+      font-size: 1.4rem;
+    }
+
+    .place--type {
+      font-size: 0.9rem;
+    }
+  }
+
+  .place-address {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: $gray-text;
+  }
+
+  .place-contact {
+    display: flex;
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+
+    .place--tel {
+      margin-right: 1rem;
+      color: $primary;
+    }
+
+    .place--map {
+      color: #19ce60;
+    }
+  }
+
+  @media screen and (max-width: $contents-width-m) {
+    .place-info {
+      flex-direction: column;
+
+      .place--name {
+        margin-bottom: 0.2rem;
+        font-size: 1.2rem;
+      }
+    }
+    .place-address {
+      font-size: 0.9rem;
+    }
+
+    .place-contact {
+      .place--tel {
+        margin-right: auto;
+      }
     }
   }
 }

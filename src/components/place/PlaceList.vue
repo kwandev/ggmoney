@@ -1,7 +1,7 @@
 <template>
   <div class="place-list">
     <ul class="places">
-      <li>샘플</li>
+      <place-list-item v-for="item in 10" :key="item" @select="onSelect" />
     </ul>
 
     <div class="btn-spread-fold" @click="onFold">{{ foldText }}</div>
@@ -9,8 +9,13 @@
 </template>
 
 <script>
+import PlaceListItem from './PlaceListItem'
+
 export default {
   name: 'PlaceList',
+  components: {
+    PlaceListItem
+  },
   data() {
     return {
       isFold: false
@@ -24,6 +29,9 @@ export default {
   methods: {
     onFold() {
       this.isFold = !this.isFold
+    },
+    onSelect() {
+      this.onFold()
     }
   }
 }

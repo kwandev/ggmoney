@@ -9,8 +9,18 @@ body {
   color: $dark;
   background-color: $white;
 }
+
+h3 {
+  margin: 0;
+  font-size: inherit;
+}
+p {
+  margin: 0;
+}
 ul,
 ol {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
