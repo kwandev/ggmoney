@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Loading from '@/components/form/Loading'
 import PlaceListItem from './PlaceListItem'
 
@@ -34,15 +35,11 @@ export default {
     }
   },
   computed: {
-    loading() {
-      return this.$store.state.place.loading
-    },
-    placeList() {
-      return this.$store.state.place.placeList
-    },
-    place() {
-      return this.$store.state.place.place
-    },
+    ...mapState('place', {
+      loading: 'loading',
+      placeList: 'placeList',
+      place: 'place'
+    }),
     foldText() {
       return this.isFold ? '펼치기 ↓' : '접기 ↑'
     }

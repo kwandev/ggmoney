@@ -73,8 +73,7 @@ export default {
 
 <style lang="scss" scoped>
 .search-form {
-  position: sticky;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 0.5rem;
   background-color: #fff;
   border: 1px solid $gray;

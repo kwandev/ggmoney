@@ -1,15 +1,18 @@
 @charset 'utf-8';
 
+$naver: #19ce60;
+$header: 64px;
+$search-form: calc(0.5rem + 56px);
+
 .place-list {
-  position: sticky;
-  margin-top: 0.5rem;
-  height: calc(100vh - 64px - (1rem + 56px) - 1.5rem);
+  margin: 0.5rem 0;
+  height: calc(100vh - 64px - (0.5rem + 56px) - 1rem);
   background-color: #fff;
   border: 1px solid $gray;
   border-radius: 0.2rem;
 
   &.fold {
-    height: 140px;
+    height: 180px;
   }
 
   .places {
@@ -81,7 +84,7 @@
     }
 
     .place--map {
-      color: #19ce60;
+      color: $naver;
     }
   }
 
@@ -102,6 +105,27 @@
       .place--tel {
         margin-right: auto;
       }
+    }
+  }
+}
+
+.place-map {
+  .map {
+    height: calc(100vh - 64px - (0.5rem + 56px) - (1rem + 180px) - 0.5rem);
+  }
+
+  .naver-info-window {
+    padding: 0.5rem;
+    border-radius: 5px;
+
+    h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    a {
+      font-size: 0.8rem;
+      color: $naver;
     }
   }
 }
