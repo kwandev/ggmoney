@@ -43,11 +43,17 @@ export default {
   },
   methods: {
     onSubmit() {
+      const places = document.getElementsByClassName('places')
+      if (places && places[0]) {
+        places[0].scrollTop = 0
+      }
+
       const options = {
-        SIGUN_NM: this.sigun,
-        CMPNM_NM: this.name,
-        REFINE_ROADNM_ADDR: this.gu,
-        REFINE_LOTNO_ADDR: this.gu
+        page: 1,
+        size: 10,
+        sigun: this.sigun,
+        name: this.name,
+        gu: this.gu
       }
       this.$store.dispatch('place/search', options)
     },
