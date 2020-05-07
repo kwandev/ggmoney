@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+.sidebar {
+  .container {
+    padding: 1rem;
+
+    .logo {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: $logo-font, sans-serif;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .contact {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 2rem 0 1rem;
+      padding: 0 4rem;
+      font-size: 2rem;
+      
+      a {
+        color: $dark;
+      }
+    }
+
+    .contact-sub {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 0.8rem;
+      color: $gray-text;
+    }
+  }
+}
