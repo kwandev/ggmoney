@@ -42,7 +42,7 @@ $search-form: calc(0.5rem + 56px);
   cursor: pointer;
 
   &.selected {
-    background-color: rgba($warning, 0.2);
+    background-color: rgba($info, 0.2);
   }
 
   &:first-child {
