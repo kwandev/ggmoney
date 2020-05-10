@@ -4,8 +4,8 @@ module.exports = {
     loaderOptions: {
       scss: {
         prependData: `
-          @import "@/assets/scss/_import/_variables.scss";
-          @import "@/assets/scss/_import/_mixins.scss";
+          @import "@/assets/scss/_/_variables.scss";
+          @import "@/assets/scss/_/_mixins.scss";
         `
       }
     }

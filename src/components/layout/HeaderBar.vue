@@ -4,7 +4,7 @@
       <h1 class="logo">ggmoney</h1>
 
       <div class="btn btn-menu" v-b-toggle.sidebar>
-        <b-icon icon="list"></b-icon>
+        <b-icon icon="info-circle"></b-icon>
       </div>
     </div>
 
@@ -14,6 +14,11 @@
           <div class="container">
             <h4 class="logo">ggmoney</h4>
             <p>ggmoney는 경기지역화폐 가맹점을 검색하는 서비스입니다.</p>
+
+            <p>
+              <strong class="red">* 모든 경기지역화폐 가맹점이 재닌기본소득 가맹점은 아님을 알려드릅니다.</strong>
+            </p>
+
             <p>
               지역, 상호명을 이용한 검색만 가능하며 내 주변 가맹점 정보는 지원하지 않습니다.
             </p>
