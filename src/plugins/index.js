@@ -1,4 +1,5 @@
 import './bootstrap-vue'
 import './axios'
 import './naver'
+import './vue-meta'
 import './vue-infinite-scroll'
