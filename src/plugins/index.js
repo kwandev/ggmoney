@@ -1,5 +1,34 @@
-import './bootstrap-vue'
-import './axios'
 import './naver'
-import './vue-meta'
-import './vue-infinite-scroll'
+
+// bootstrap
+import 'mutationobserver-shim'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+
+// axios
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+// vue-meta
+import Meta from 'vue-meta'
+
+// bootstrap > portal-vue
+import PortalVue from 'portal-vue'
+
+import infiniteScroll from 'vue-infinite-scroll'
+
+export default {
+  install(Vue) {
+    Vue.use(BootstrapVue)
+    Vue.use(BootstrapVueIcons)
+
+    Vue.use(VueAxios, axios)
+
+    Vue.use(Meta)
+
+    Vue.use(PortalVue)
+
+    Vue.use(infiniteScroll)
+  }
+}
