@@ -16,9 +16,10 @@ import Meta from 'vue-meta'
 // bootstrap > portal-vue
 import PortalVue from 'portal-vue'
 
+// infinite-scroll
 import infiniteScroll from 'vue-infinite-scroll'
 
-export default {
+const plugins = {
   install(Vue) {
     Vue.use(BootstrapVue)
     Vue.use(BootstrapVueIcons)
@@ -32,3 +33,9 @@ export default {
     Vue.use(infiniteScroll)
   }
 }
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(plugins)
+}
+
+export default plugins
