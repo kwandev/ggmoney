@@ -28,7 +28,7 @@ const mutations = {
   setTotal(state, total) {
     state.total = total
   },
-  setPlaceList(state, { list, params }) {
+  setPlaceList(state, { list = [], params = {} }) {
     state.page = params.pIndex || 1
     state.size = params.pSize || 10
     state.lastPage = Math.ceil(state.total / state.size)
@@ -62,7 +62,7 @@ const actions = {
       }
 
       const {
-        data: { RegionMnyFacltStus }
+        data: { RegionMnyFacltStus, RESULT }
       } = await Vue.axios.get(`${GG_API_URI}`, {
         params: {
           KEY: GG_API_KEY,
@@ -71,9 +71,10 @@ const actions = {
         }
       })
 
-      if (RegionMnyFacltStus && RegionMnyFacltStus.code === 'INFO-200') {
+      if (RESULT && RESULT.CODE === 'INFO-200') {
         commit('setTotal', 0)
-        commit('setPlaceList', [])
+        commit('setPlaceList', {})
+        return
       }
 
       const total = RegionMnyFacltStus[0].head[0].list_total_count
