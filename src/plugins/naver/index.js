@@ -1,4 +1,4 @@
-const URL = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.VUE_APP_NAVER_API_KEY}`
+const URL = `https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=lc2bcwtrpl`
 
 const script = document.createElement('script')
 
